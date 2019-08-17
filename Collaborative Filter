@@ -1,0 +1,52 @@
+# https://grouplens.org/datasets/movielens/1m/ the corresponding web page adress for Movie Lens data set
+# I used Collaborative Filter to get all behaviours of viewer 
+
+import numpy as np
+
+numberofrating = 1000209
+
+# Rating (ID of users, Rating of j th movie) (ID of users-1, ID of Movie-1, rating), (6040, 3952, 1-5).
+# Value of rating starts from 1 up to 5, only integer values.
+# r[MovieID][2] = Rating of the corresponding movie
+r = np.loadtxt('r.txt', dtype=int)
+
+
+# theta User likes??? vector (User ID, likes??? matrix)
+t_values = np.zeros((6040, 19), dtype=float)
+t_low = np.zeros((6040, 19), dtype=float)
+t = 0
+
+# feature vector (Number of movie, features)
+features = np.loadtxt('MovieFeatureMatrix.txt', dtype=int)
+f = np.zeros((3952, 19), dtype=float)
+
+# learning rate (0.4)
+alpha = 1
+
+for i in range(0, 6040, 1):
+    t_values[i][0] = i + 1
+    t_low[i][0] = i + 1
+
+# initialize small values for guessing the right value
+for i in range(0, 6040, 1):
+    for j in range(0, 18, 1):
+        t_values[i][j + 1] = 0.0
+
+for i in range(0, 3952, 1):
+    for j in range(0, 19, 1):
+        if features[i][j] == 0:
+            f[i][j] = 0.0
+        else:
+            f[i][j] = features[i][j]
+
+for mainloop in range(0, 4, 1):
+
+    for ll in range(0, numberofrating, 1):
+        for ff in range(1, 19, 1):
+            t_values[r[ll][0] - 1][ff] -= alpha * ((t_values[r[ll][0] - 1][ff] * f[r[ll][1]-1][ff] - r[ll][2])
+                                                       * f[r[ll][1]-1][ff] + 0.01 * t_values[r[ll][0]-1][ff])
+
+# Viewer and each of feature likes, as a float value between 0 to 5
+# Columns of Theta= ["Viewer Id", "Action", "Adventure", "Animation", "Children's", "Comedy", "Crime", "Documentary", "Drama", "Fantasy", 
+#"Film-Noir", "Horror", "Musical", "Mystery", "Romance", "Sci-Fi", "Thriller", "War", "Western"]
+np.savetxt('theta.txt', t_values, fmt='%f')
