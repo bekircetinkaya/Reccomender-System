@@ -7,3 +7,9 @@ I downloaddd the data sets from the web page mentioned in the algorith and prenp
 For recommendation I thought that If each user age, location etc. are given as what they are, could have been better createn specific cluster for them to classified users. 
 
 Theta is the Callobrave filter result respect to give parameter( the results are float numbers between 0 to 5). 
+
+I would dreamed to get better matching, it should be obtained if:
+
+- each user age are known
+- cluster of residance of users created 
+- relationship of movie publishing time and user age related.
