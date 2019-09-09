@@ -1,4 +1,4 @@
-# Reccomender-System
+# Recommender-System
 
 Callobrative filtering one of the Recommender method. MovieLens data sets used to derive like matrices ( theta.txt) of each user. The derived rating in the theta file is between 0 to 5 float numbers.
 
@@ -16,4 +16,4 @@ I would dreamed to get better matching, it should be obtained if:
 
 Than, for any user to find recommendation:
 - find responsible cluster of the user
-- find a user, whos like matrix is closest the user matrix 
+- find a user ( in same cluster), whos like matrix is closest the user matrix
