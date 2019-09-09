@@ -10,6 +10,10 @@ Theta is the Callobrave filter result respect to give parameter( the results are
 
 I would dreamed to get better matching, it should be obtained if:
 
-- each user age are known
-- cluster of residance of users created 
+- each user age and related informations are known
+- cluste respect to the information given of users are created 
 - relationship of movie publishing time and user age related.
+
+Than, for any user to find recommendation:
+- find responsible cluster of the user
+- find a user, whos like matrix is closest the user matrix 
