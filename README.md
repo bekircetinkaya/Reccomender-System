@@ -13,6 +13,7 @@ I would dreamed to get better matching, it should be obtained if:
 - each user age and related informations are known ( to use cortelation function)
 - cluster respect to the information given of users are created
 - relationship of movie publishing time and user age relation
+-...
 
 Than, for any user to find recommendation:
 - find responsible cluster of the user
