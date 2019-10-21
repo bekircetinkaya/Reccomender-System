@@ -4,7 +4,7 @@ Callobrative filtering one of the Advanced Recommender method ( where the attrib
 
 I downloaddd the data sets from the web page mentioned in the algorith and preprocessed by numpy and panda to transform to easier form to directly use them. 
 
-For recommendation I thought that If each user age, location etc. are given as what they are, could have been better createn specific cluster for them to classified users. 
+For recommendation I thought that If each user age, location etc. are explicitly given as what they are, could have been better createn specific cluster for them to classified users. 
 
 Theta is the Content Based filtering result respect to give parameter( the results are float numbers between 0 to 5). 
 
