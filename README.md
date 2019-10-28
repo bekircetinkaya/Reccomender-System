@@ -6,7 +6,7 @@ I downloaddd the data sets from the web page mentioned in the algorith and prepr
 
 For recommendation I thought that If each user age, location etc. are explicitly given as what they are, could have been better createn specific cluster for them to classified users. 
 
-Theta is the Content Based filtering result respect to give parameter( the results are float numbers between 0 to 5). 
+Theta is the Content Based filtering result of attributes respect to give parameter( the results are float numbers between 0 to 5). 
 
 I would dreamed to get better matching, it should be obtained if:
 
@@ -16,5 +16,5 @@ I would dreamed to get better matching, it should be obtained if:
 -...
 
 Than, for any user to find recommendation:
-- find responsible cluster of the user
+- find responsible cluster of the user depend on theta,
 - find a user ( in same cluster), whos attribute matrix is closest the user matrix.
