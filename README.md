@@ -1,6 +1,6 @@
 # Recommender-System
 
-Callobrative filtering one of the Advanced Recommender method ( where the attributes are unknown or almost ...). however, I use more simpler method ,Content Based Filtering to determine attributes (theta.txt) of each of the user respect to MovieLens data set . The derived rating in the theta file is between 0 to 5 float numbers.
+Callobrative filtering one of the Advanced Recommender method. However, I use more simpler method ,Content Based Filtering (without  appliccation of correlation function on the given attributes) to determine attributes (theta.txt) of each of the user respect to MovieLens data set . The derived rating in the theta file is between 0 to 5 float numbers.
 
 I downloaddd the data sets from the web page mentioned in the algorith and preprocessed by numpy and panda to transform to easier form to directly use them. 
 
